@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Hamburg Hand';
+    src: url('HamburgHandRegular.eot');
+    src: url('HamburgHandRegular.eot?#iefix') format('embedded-opentype'),
+        url('HamburgHandRegular.woff2') format('woff2'),
+        url('HamburgHandRegular.woff') format('woff'),
+        url('HamburgHandRegular.ttf') format('truetype'),
+        url('HamburgHandRegular.svg#HamburgHandRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

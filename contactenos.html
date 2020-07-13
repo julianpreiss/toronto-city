@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciudad de Toronto - Contacto</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="script/details-shim.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/details-shim.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="cuerpo">
+			<header>
+				<h1 id="toronto">Toronto <span id="canada">Canada</span></h1>
+				<nav>
+				<ul id="menu">
+				<li><a href ="index.html">Home</a></li>
+				<li><a href ="informacion.html">Informacion</a></li>
+				<li><a href ="lugares.html">Lugares</a></li>
+				<li class="posicionActual"><a href ="contactenos.html">Contactenos</a></li>
+				</ul>
+				</nav>
+			</header>
+	<main id="fondoFormulario">
+	<div class="contenedor">
+	<h1>Contactenos</h1>
+	<p>Solicitanos <b>toda la información</b> que quieras sobre la ciudad</p>
+	
+	<form action="http://recursos.grodriguez.com.ar/FORM/" method="POST" enctype="multipart/form-data">
+	
+	<div class="form">
+	<span>Nombre</span>
+		<input type="text" name="nombre" required/>
+	<span>Correo</span>
+		<input type="email" name="mail" required />
+	<span>En qué país residís?</span>
+		<select id="country" name="country">
+		<option value="Argentina">Argentina</option>
+		<option value="Bolivia">Bolivia</option>
+		<option value="Brazil">Brazil</option>
+		<option value="Chile">Chile</option>
+		<option value="Ecuador">Ecuador</option>
+		<option value="Mexico">Mexico</option>
+		<option value="Uraguay">Uruguay</option>
+		<option value="Venezuela">Venezuela</option>
+		</select>
+	<span> Qué información querés recibir? </span>
+		<div><input class="casilla" type="checkbox" name="cl" value="cl" />Como viajar</div>
+		<div><input class="casilla" type="checkbox" name="dh" value="dh" />Donde Hospedarme</div>
+		<div><input class="casilla" type="checkbox" name="ct" value="ct" />City tours</div>
+	<span> Cuál es tu prioridad? </span>
+		<div><input class="casilla" name="prioridad" type="radio" value="confort" /> 
+		Confort</div>
+		<div><input class="casilla" name="prioridad"  type="radio" value="precios bajos" />Precios bajos</div>			
+	<input type="submit" value="Enviar" id="envio" />
+	</div>
+	</form>
+	</div>		
+	</main>
+			<footer>
+			<div class="margenFooter">
+				<div class="columnasFooter">
+				<p class="titulosFooter">Toronto</p>
+				<ul>
+				<li>Guía Turistica</li>
+				<li>Excursiones</li>
+				<li>Traslado</li>
+				<li>Hoteles</li>
+				<li>Apartamentos</li>
+				<li>Alquiler Autos</li>
+				<li>Vuelos</li>
+				</ul>
+				</div>
+				<div class="columnasFooter">
+				<p class="titulosFooter">Soporte</p>
+				<ul>
+				<li>Contactos</li>
+				<li>Preguntas</li>
+				<li>Politica de privacidad</li>
+				<li>Hoteles</li>
+				<li>Apartamentos</li>
+				<li>Alquiler Autos</li>
+				<li>Vuelos</li>
+				</ul>
+				</div>
+				<div class="columnasFooterAncha">
+				<p class="titulosFooter">Trabaja con nosotros</p>
+				<ul>
+				<li>Guía Turistica</li>
+				<li>Excursiones</li>
+				<li>Traslado</li>
+				<li>Hoteles</li>
+				</ul>
+				</div>
+				<div class="segundaFila">
+				<p class="descarga">Descarga nuestra App</p>
+				<p class="ofertas"> Siguenos</p>
+				</div>
+				<div class="segundaFila">
+				<span id="apple"></span>
+				<span id="android"></span>
+				<div id="fb"><a id="fblink" href="#"></a></div>
+				<div class="igtw"><a id="iglink" href="#"></a></div>
+				<div class="igtw"><a id="twlink" href="#"></a></div>
+				<div class="lineaDivisoria"></div>
+				</div>
+
+				
+			<details>
+			<summary><span>Datos de la entrega</span></summary>
+			<p>Julian Preiss - Maquetado HTML/CSS - Prof. Mabel García - TP2: Diseño web de una ciudad</p>
+			</details>
+			</div>
+			</footer>
+			
+
+			
+</div>	
+</body>
+</html>
+
+
