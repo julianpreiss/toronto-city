@@ -7,14 +7,17 @@
 	<script src="script/details-shim.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/details-shim.min.css" />
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="icon" href="imagenes/favicon.ico">
+	<link href="mobile.css" type="text/css" rel="stylesheet" media="screen and (max-width:400px)"/>
+	<link rel="stylesheet" media="(max-width: 600px)" href="mobile.css" />
 </head>
 <body>
 <div id="cuerpo">
 			<header>
-				<h1 id="toronto">Toronto <span id="canada">Canada</span></h1>
 				<nav>
-				<ul id="menu">
-				<li class="posicionActual"><a href ="index.html">Home</a></li>
+				<h1 id="toronto">Toronto <span id="canada">Canada</span></h1>
+				<ul>
+				<li><a href ="index.html">Home</a></li>
 				<li><a href ="informacion.html">Informacion</a></li>
 				<li><a href ="lugares.html">Lugares</a></li>
 				<li><a href ="contactenos.html">Contactenos</a></li>
@@ -23,11 +26,11 @@
 			</header>
 			<main>
 			<div class="contenedorImagen">
-			<img src="imagenes/skyline2.jpg" alt="Skyline de Toronto"/>
+			<div class="imagenciudad"></div>
 			<p class="textoImagen">Toronto</p>
 			</div>
-			<p id="presentacion">Acercate y conoce el <i>corazón</i> de Canada. <br />
-			Dejate atrapar por su <b>espíritu cosmopolita</b></p>
+			<p id="presentacion">Acercate y conoce el <span class="letraItalica">corazón</span> de Canada. <br />
+			Dejate atrapar por su <span class="letraBold">espíritu cosmopolita</span></p>
 			<ul class="grupoRecuadros">
 				<li id="comoLlegar"><span class="textoBajo">Como llegar</span></li>
 				<li id="mapa"><span class="textoBajo">Mapa</span></li>
@@ -43,7 +46,7 @@
 			<section id="informacion">
 			<h2 id="tituloInfo">Una ciudad multicultural</h2>
 			<div id="recuadroTexto">
-			<p class="textoInfo"><strong>Toronto es la ciudad multicultural por excelencia.</strong> La leyenda urbana -estadísticas que todo el mundo cita, pero que nadie es capaz de mencionar su procedencia- indica que <strong>más de la mitad de sus residentes no han nacido en Canadá</strong> y gran parte de la ciudad está formada por un conglomerado de barrios residenciales en los que se han establecido las diferentes comunidades, con sus correspondientes negocios, restaurantes y formas de vida. En un paseo de pocos kilómetros podemos ir del barrio griego al portugués, pasando por Chinatown, Little Italy o el barrio coreano. <strong>Toronto es un pequeño mundo en sí misma que nos ofrece una gran riqueza cultural, idiomática y gastronómica</strong> en una sola ciudad.</p>
+			<p class="textoInfo"><strong>Toronto es la ciudad multicultural por excelencia.</strong> La leyenda urbana -estadísticas que todo el mundo cita, pero que nadie es capaz de mencionar su procedencia- indica que <strong>más de la mitad de sus residentes no han nacido en Canadá</strong> y gran parte de la ciudad está formada por un conglomerado de barrios residenciales en los que se han establecido las diferentes comunidades, con sus correspondientes negocios, restaurantes y formas de vida. En un paseo de pocos kilómetros podemos ir del barrio griego al portugués, pasando por Chinatown, <span lang="en">Little Italy</span> o el barrio coreano. <strong>Toronto es un pequeño mundo en sí misma que nos ofrece una gran riqueza cultural, idiomática y gastronómica</strong> en una sola ciudad.</p>
 			<p class="textoInfo">Toronto es también la ciudad más importante de Canadá -tanto por población, como por
 			su papel de centro económico y financiero y nudo de comunicaciones-, aunque la capital
 			del país es la vecina Ottawa. Sin embargo, sí <strong>es la capital y la ciudad de referencia de la
@@ -58,7 +61,7 @@
 				<ul id="tarjetasInfo">
 				<li>
 				<img class="imagenTarjeta" src="imagenes/rogers.png" alt="Estadio Rogers Center">
-				<p><strong>Toronto se caracteriza por su destacada participación en multiples deportes profesionales.</strong> El Rogers Center es la casa de los Blue Jays, el equipo de Baseball.</p>
+				<p><strong>Toronto se caracteriza por su destacada participación en multiples deportes profesionales.</strong> El <span lang="en">Rogers Center</span> es la casa de los Blue Jays, el equipo de Baseball.</p>
 				</li>
 				<li>
 				<img class="imagenTarjeta" src="imagenes/gyukaku.png" alt="Barbacoa servida en gyu kaku">
@@ -71,17 +74,18 @@
 				</li>
 				<li>
 				<img class="imagenTarjeta" src="imagenes/roythomsonhall.png" alt="Edificio Roy Thomson">
-				<p>Todos los años, miles de turistas llegan a la ciudad exclusivamente para deleitarse con la <b>arquitectura vanguardista</b></p>
+				<p>Todos los años, miles de turistas llegan a la ciudad exclusivamente para deleitarse con la <span class="letraBold">arquitectura vanguardista</span></p>
 				</li>
 				</ul>
 			</section>
 			<section id="audiovisual">
 			<div id="videoToronto">
 			<h2>RECORRIDO VIRTUAL</h2>
-			<p> En este video podrás <b>recorrer las calles y descubrir</b> que es lo que te aguarda en tu visita </p>
+			<p> En este video podrás <span class="letraBold">recorrer las calles y descubrir</span> que es lo que te aguarda en tu visita </p>
 			<!-- REVISAR!!!!! -->
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/YhPI38MJ1tg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
+			<button type="button" name="button" class="botonAnimado">Quiero viajar!</button>
 			</section>
 			</main>
 			<footer>
@@ -124,11 +128,11 @@
 				<p class="ofertas"> Siguenos</p>
 				</div>
 				<div class="segundaFila">
-				<span id="apple"></span>
-				<span id="android"></span>
-				<div id="fb"><a id="fblink" href="#"></a></div>
-				<div class="igtw"><a id="iglink" href="#"></a></div>
-				<div class="igtw"><a id="twlink" href="#"></a></div>
+				<span id="apple">Descarga App para Apple</span>
+				<span id="android">Descarga App para android</span>
+				<div id="fb"><a id="fblink" href="#">Facebook</a></div>
+				<div class="igtw"><a id="iglink" href="#">Instagram</a></div>
+				<div class="igtw"><a id="twlink" href="#">Twitter</a></div>
 				<div class="lineaDivisoria"></div>
 				</div>
 

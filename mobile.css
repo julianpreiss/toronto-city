@@ -21,8 +21,9 @@ body{font-family:"Montserrat";
 	}
 
 #cuerpo{
-	width: 1366px;
+	width: 320px;
 	background:#FFFFFF;
+	overflow:hidden;
 	}
 	
 .letraBold {
@@ -40,6 +41,7 @@ body{font-family:"Montserrat";
 header {
 background: rgb(10,0,172);
 background: linear-gradient(90deg, rgba(10,0,172,1) 0%, rgba(0,188,226,1) 93%, rgba(193,247,255,1) 100%);
+width:100%
 }
 
 header::after {
@@ -113,9 +115,9 @@ nav li a:hover::before {
 	}
 	
 .imagenciudad {	
-	background-image: url(imagenes/skyline2.jpg);
-	width:1366px;
-	height:846px;
+	background-image: url(imagenes/skyline2mobile.jpg);
+	width:320px;
+	height:198px;
 	position: relative;
 	}	
 	
@@ -125,7 +127,7 @@ nav li a:hover::before {
     left: 50%;
     transform: translate(-50%, -50%);
 	font-family: "Hamburg Hand";
-	font-size: 200px;
+	font-size: 60px;
 	color: white;
 	}
 		
@@ -133,26 +135,35 @@ nav li a:hover::before {
 #presentacion{
 	text-align:center;
 	font-weight: regular;
-	font-size: 32px;
+	font-size: 26px;
 	margin-top: 70px;
 	margin-bottom: 70px;	
 	}
 	
 .grupoRecuadros {
-	padding:0px 0px 0px 168px;
-	margin-bottom: 50px;
+	width:185px;
+	margin-right:auto;
+	margin-left: auto;
+	text-align: center;
+	padding-left: 0px;
 	}
 	
 .grupoRecuadros li{
 	display:inline-block;
-	width:220px;
-	height:275px;
-	margin-right: 57px;
+	width:180px;
+	height:220px;
+	margin-bottom:20px;
+	margin-right: auto;
+	margin-left: auto;
 	background-color: #b7b6fd;
 	background-repeat: no-repeat;
-	background-position:50% 30%;
 	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
 	border-radius: 4px;
+	text-align: center;
+	}
+	
+.grupoRecuadros li:last-child {
+	margin-bottom:-20px;
 	}
 
 .grupoRecuadros li:hover {
@@ -160,11 +171,12 @@ nav li a:hover::before {
 	}
 	
 .textoBajo {
-	padding-top: 200px;
+	padding-top: 180px;
 	width:220px;
-	text-align:center;	
-	display: inline-block;
-	font-size:24px;
+	display: block;
+	font-size:20px;
+	position:relative;
+	left:-20px;
 	}
 
 /*iconos*/
@@ -195,20 +207,25 @@ nav li a:hover::before {
  
 #tituloInfo{
 	text-align:center;
-	font-size: 65px;
-	padding-top:50px;
-	margin-bottom: 70px;
+	font-size: 30px;
+	padding-top:20px;
+	margin-bottom: 30px;
 	}
 
 #informacion {
-	background: url(imagenes/aereaciudad.jpg) no-repeat;
-	height:522px;
+	background:  none;
+	height:650px;
 	}
 #recuadroTexto {
-	width:1086px;
-	height:240px;
-	margin-left:165px;
-	background-color:rgba(255,255,255,0.7)
+	width:300px;
+	margin: 0 auto;
+	background-color:rgba(255,255,255,0.7);
+	margin-bottom: 10px;
+	height:800px;
+	}
+	
+.textoInfo:last-child {
+	display:none;
 	}
 	
 .textoInfo{
@@ -228,10 +245,13 @@ nav li a:hover::before {
 	text-align: center;
 	padding-top: 50px;
 	padding-bottom: 30px;
+	width:300px;
+	margin: 0 auto;
 	}
 
 #tarjetasInfo {
-	margin-left:100px;	
+	width:320px;
+	margin: 0 auto;
 	}
 	
 #tarjetasInfo li {
@@ -239,7 +259,8 @@ nav li a:hover::before {
 	width:248px;
 	height:250px;
 	background-color: white;
-	margin-right: 25px;
+	margin-right: 0px;
+	margin-bottom: 15px;
 	vertical-align:top;
 	box-shadow: 2px 2px 5px #666;
 	}
@@ -249,12 +270,12 @@ nav li a:hover::before {
 	}
 
 #tarjetasInfo li p {
-	margin: 5px 5px 0px 7px;
+	margin: 5px 5px 5px 7px;
 	font-size: 13px;
 	}
 	
 #imagenesDescriptivas {
-	height:500px;
+	height:0px;
 	background-color: #white;
 	}
 	
@@ -275,6 +296,13 @@ nav li a:hover::before {
 
 #audiovisual p {
 	padding-bottom: 30px;
+	width:300px;
+	margin: 0 auto;
+	}
+
+iframe {
+	width:320px;
+	height:260px;
 	}
 
 /*Boton aprendido con tutorial de Freecodecamp
@@ -289,7 +317,7 @@ Link: https://www.youtube.com/watch?v=pmKyG3NBY_k&list=PLWKjhJtqVAbl1AfjiGyYxwpd
 	border: none;
 	color: white;
 	transition: all ease 0.3s;
-	margin-left: 580px;
+	margin-left:50px;
 	margin-bottom: 30px;
 	margin-top: 30px;
 	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
@@ -321,17 +349,17 @@ footer {
 	}
 
 .margenFooter {
-	margin-left: 100px;
+	margin-left: 20px;
 	}
 
 .columnasFooter {
-	width: 350px;
+	width: 320px;
 	display: inline-block;
 	vertical-align:top;
 	}
 
 .columnasFooterAncha {
-	width: 500px;
+	width: 320px;
 	display: inline-block;
 	vertical-align:top;
 	}
@@ -339,8 +367,9 @@ footer {
 .titulosFooter {
 	font-size: 40px;
 	padding-top: 40px;
-	margin-left: 40px;
+	margin-left: 0px;
 	font-weight: bold;
+	
 	}
 	
 .columnasFooter li ,.columnasFooterAncha li{
@@ -348,6 +377,7 @@ footer {
 	font-size: 25px;
 	padding-top: 10px;
 	margin-left: 0px;
+	padding-left:0px;
 	}
 
 .segundaFila {	
@@ -357,7 +387,6 @@ footer {
 .descarga {
 	font-size: 25px;
 	padding-top: 40px;
-	padding-right: 372px;
 	margin-left: 40px;
 	font-weight: bold;
 	display: inline-block;
@@ -373,7 +402,8 @@ footer {
 
 #apple, #android {
 	margin-top: 15px;
-	margin-left: 40px;
+	margin: 0 58px 0 38px;
+	padding: 0;
 	width:204px;
 	height:56px;	
 	display: inline-block;
@@ -392,7 +422,8 @@ footer {
 	width:64px;
 	height:64px;
 	display:inline-block;
-	margin-left: 250px;
+	margin-left: 40px;
+	margin-bottom:8px;
 	position: relative;
 	}
 	
@@ -447,7 +478,7 @@ summary {
 .lineaDivisoria {
 	margin-top: 15px;
 	height: 1 px;
-	width: 1166px;
+	width:100%;
 	border: solid 1px;
 	}
 
@@ -1005,17 +1036,6 @@ select {
 	text-align: center;
 	padding-top:50px;
 	}
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
    
    

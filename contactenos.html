@@ -7,24 +7,26 @@
 	<script src="script/details-shim.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/details-shim.min.css" />
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="icon" href="imagenes/favicon.ico">
 </head>
 <body>
 <div id="cuerpo">
 			<header>
-				<h1 id="toronto">Toronto <span id="canada">Canada</span></h1>
 				<nav>
-				<ul id="menu">
+				<h1 id="toronto">Toronto <span id="canada">Canada</span></h1>
+				<ul>
 				<li><a href ="index.html">Home</a></li>
 				<li><a href ="informacion.html">Informacion</a></li>
 				<li><a href ="lugares.html">Lugares</a></li>
-				<li class="posicionActual"><a href ="contactenos.html">Contactenos</a></li>
+				<li><a href ="contactenos.html">Contactenos</a></li>
 				</ul>
 				</nav>
 			</header>
 	<main id="fondoFormulario">
 	<div class="contenedor">
+	<div class="lineaColor"></div>
 	<h1>Contactenos</h1>
-	<p>Solicitanos <b>toda la información</b> que quieras sobre la ciudad</p>
+	<p>Solicitanos <span class="letraBold">toda la información</span> que quieras sobre la ciudad</p>
 	
 	<form action="http://recursos.grodriguez.com.ar/FORM/" method="POST" enctype="multipart/form-data">
 	
@@ -48,10 +50,9 @@
 		<div><input class="casilla" type="checkbox" name="cl" value="cl" />Como viajar</div>
 		<div><input class="casilla" type="checkbox" name="dh" value="dh" />Donde Hospedarme</div>
 		<div><input class="casilla" type="checkbox" name="ct" value="ct" />City tours</div>
-	<span> Cuál es tu prioridad? </span>
-		<div><input class="casilla" name="prioridad" type="radio" value="confort" /> 
-		Confort</div>
-		<div><input class="casilla" name="prioridad"  type="radio" value="precios bajos" />Precios bajos</div>			
+		<div><input class="casilla" type="checkbox" name="tt" value="ct" />Trabajar en Toronto</div>
+	<span> Si tu motivo es trabajo, adjunta tu CV para que podamos enviarte información más específica </span>
+	<input class="inputEstilo" type="file" name="adjunto" accept=".pdf,.doc,.docx" multiple />	
 	<input type="submit" value="Enviar" id="envio" />
 	</div>
 	</form>
@@ -97,11 +98,11 @@
 				<p class="ofertas"> Siguenos</p>
 				</div>
 				<div class="segundaFila">
-				<span id="apple"></span>
-				<span id="android"></span>
-				<div id="fb"><a id="fblink" href="#"></a></div>
-				<div class="igtw"><a id="iglink" href="#"></a></div>
-				<div class="igtw"><a id="twlink" href="#"></a></div>
+				<span id="apple">Descarga App para Apple</span>
+				<span id="android">Descarga App para android</span>
+				<div id="fb"><a id="fblink" href="#">Facebook</a></div>
+				<div class="igtw"><a id="iglink" href="#">Instagram</a></div>
+				<div class="igtw"><a id="twlink" href="#">Twitter</a></div>
 				<div class="lineaDivisoria"></div>
 				</div>
 
