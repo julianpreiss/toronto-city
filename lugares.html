@@ -2,23 +2,39 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ciudad de Toronto - Lugares</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script src="script/details-shim.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/details-shim.min.css" />
+	<link rel="stylesheet" type="text/css" href="tipografia/stylesheet.css" />
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<link rel="icon" href="imagenes/favicon.ico">
+	
+  <!-- jQuery -->
+  <script src="script/jquery.min.js"></script>
+  <!-- Fotorama -->
+  <link href="css/fotorama.css" rel="stylesheet">
+  <script src="script/fotorama.js"></script>
+  
+	<link href="tablet.css" type="text/css" rel="stylesheet" media="screen and (max-width:800px)"/>
+	<link href="mobile.css" type="text/css" rel="stylesheet" media="screen and (max-width:480px)"/>
+
 </head>
 <body>
 <div id="cuerpo">
 			<header>
 				<nav>
+				<div class="botonMenu">
+				<div class="menuHamburguesa"></div>
+				</div>
 				<h1 id="toronto">Toronto <span id="canada">Canada</span></h1>
-				<ul>
+				<ul class="menuPrincipal">
 				<li><a href ="index.html">Home</a></li>
 				<li><a href ="informacion.html">Informacion</a></li>
 				<li><a href ="lugares.html">Lugares</a></li>
 				<li><a href ="contactenos.html">Contactenos</a></li>
+				<li><a href ="alojamiento.html">Alojamiento</a></li>
 				</ul>
 				</nav>
 			</header>
@@ -27,7 +43,7 @@
 				<div class="imagengaleria"></div>
 				<p class="textoImagen">Toronto</p>
 			</div>
-			<div class="contenedorSobreImagen"><p><span class="colorRojo">Toronto</span> es la ciudad más poblada de Canada, y también la más diversa en cuanto a Ocio y cultura.<br />
+			<div class="contenedorSobreImagen"><p><span class="colorRojo">Toronto</span> es la ciudad más poblada de Canada, y también la más diversa en cuanto a ocio y cultura.<br />
 			Descubre la <span class="colorRojo">infinita variedad</span> de diversiones que esta ciudad tiene para ofrecerte.</p>
 			</div>
 			<ol id="menuAtracciones">
@@ -40,47 +56,55 @@
 			<section class="barrios">
 			<h2 class="headersBarrios" id="anclaUno">Primera parada: El <span class="letraBold" lang="en">DOWNTOWN</span></h2>
 				<div class="contenedorImg">
+			<picture>
+				<source srcset="imagenes/mobile-downtown.jpg" media="(max-width: 480px)" />
+				<source srcset="imagenes/tabletdowntown.jpg" media="(max-width: 800px)" />
 				<img src="imagenes/downtown.jpg" alt="Skyline Downtown Toronto"/>
+			</picture>
 				</div>
 				<div class="presentacionBarrio">
 				<p><em>De todos los barrios, el downtown de Toronto es el más grande e importante a nivel turístico.</em></p>
-				<p>El dinamismo de una ciudad que no duerme se vive al máximo en esta zona, entre rascacielos y entretenimiento. Ya sea de día o de noche y además sin importar el clima en Toronto, esta parte de la ciudad roba la atención de quienes la visitan.</p>
+				<p>El dinamismo de una ciudad que no duerme se vive al máximo en esta zona, entre rascacielos y entretenimiento. Ya sea de día o de noche y además sin importar el clima, esta parte de la ciudad despierta la atención de quienes la visitan.</p>
 				<p><strong>La mayoría de los lugares turísticos de la ciudad giran alrededor de este barrio</strong>, dada su importancia a nivel económico y social.</p>
 				</div>
 				<h3>Principales atracciones</h3>
 				<div class="columnaInfo">
 					<h4>Torre CN</h4>
 					<p>La <abbr title="Canadian National">CN</abbr> Tower es la quinta torre más alta del mundo y la más alta en América, con 553 metros de altura.<br />
-					Desde la parte más baja hasta la cima es todo un espectáculo, principalmente para admirar la ciudad en su máxima extensión sin importar el clima en Toronto.<br />
-					Visitar este lugar se trata de subir a un ascensor que te llevará a los niveles de acuerdo al tipo de entrada que tengas.<br />
-					Luego, en cada lugar podrás apreciar la vista de Toronto, el lago de Ontario y todo el puerto. Posee una vista 360 grados.</p>
+					Desde su base hasta la cima, es todo un espectáculo, principalmente para admirar la ciudad en su máxima extensión sin importar el clima en Toronto.<br />
+					La visita a este lugar posibilita subir a un ascensor que te llevará a los distintos niveles, de acuerdo al tipo de entrada que adquieras.<br />
+					Luego, en cada lugar podrás apreciar la vista de Toronto, el lago de Ontario y todo el puerto, ya que posee una vista 360 grados.</p>
 				</div>
 				<div class="columnaInfo">
 					<h4>Museo Royal Ontario</h4>
 					<p>Conocido bajo las siglas <abbr title="Royal Ontario Museum">ROM</abbr>, este museo se lleva el titulo del quinto más grande de América del norte.<br/>
 					<strong>El museo alberga una gran colección de historia natural, zoología, arqueología, mineralogía y paleontología.</strong><br/>
-					Desde la entrada recibirás un mapa con cada una de las galerías disponibles para visitar.
-					Visitar el museo te puede tomar unas 3 horas y no lo verás completo.<br/>
+					En la entrada recibirás un mapa con cada una de las galerías disponibles para visitar.
+					Para recorrer el museo completo, debes disponer de unas 3 horas.<br/>
 					Posee galerías interesantes como la del arte Egipcio, donde podrás ver procesos de momificación y alrededor de 2mil piezas de la época.<br/>
 				</div>
 				<div class="columnaInfo">
 					<h4>Acuario Ripley</h4>
 					<p>Inspirado en hábitats marinos y de agua dulce de todo el mundo, el <strong ><abbr title="Ripley's Aquarium of Canada">RAC</abbr> te coloca frente a las maravillas acuáticas más coloridas e impactantes que existen</strong>. Este es el acuario interior más grande de Canadá; encontrarás exhibiciones táctiles divertidas, charlas educativas con acuaristas, espectáculos de buceo en vivo y más de 100 pantallas interactivas.<br />
-					Tendrás la posibilidad de explorar nueve galerías, cada una con su propia temática acuática, donde podrás comprobar que, como una vez dijo Da Vinci: El agua es la fuerza motriz de toda la naturaleza. </p>
+					Tendrás la posibilidad de explorar nueve galerías, cada una con su propia temática acuática, donde podrás comprobar que, como una vez dijo Da Vinci: <q cite="https://www.azquotes.com/author/15101-Leonardo_da_Vinci/tag/water">El agua es la fuerza motriz de toda la naturaleza.</q> </p>
 				</div>
 			</section>
 			<section class="barrios barriosWhite">
 			<h2 class="headersBarrios" id="anclaDos">Adentremonos en Chinatown</h2>
 				<div class="contenedorImg">
-				<img src="imagenes/chinatown.jpg" alt="Edificios de Chinatown"/>
+				<picture>
+					<source srcset="imagenes/mobile-chinatown.jpg" media="(max-width: 480px)" />
+					<source srcset="imagenes/tabletchinatown.jpg" media="(max-width: 800px)" />
+					<img src="imagenes/chinatown.jpg" alt="Edificios de Chinatown"/>
+				</picture>
 				</div>
 				<div class="presentacionBarrio">
-				<p><strong>Chinatown está comprendida por varias calles del centro de Toronto.</strong> Ellas guardan la historia y el presente de la cultura que ha originado este tipo de barrios alrededor del mundo.</p>
+				<p><strong>Chinatown está comprendida por varias calles del centro de Toronto.</strong> Ellas guardan la historia y el presente de la cultura oriental que ha originado este tipo de barrios alrededor del mundo.</p>
 				<p>Aunque no posee lugares turísticos estamos frente a <em>un lugar muy visitado por turistas debido a sus restaurantes.</em><br />
 				La mayoría de los días de la semana durante el verano podrás ver las calles llenas de locales al exterior.</p>
 				<p>Chinatown Toronto comparte lugar con el mercado Kensington, donde podrás dar una caminata, conocer sus tiendas y entrar en algunos locales. Este mercado es considerado como la parte bohemia de la ciudad.</p>
 				</div>
-				<h3> Restaurantes </h3>
+				<h3 class="notForMobile"> Restaurantes </h3>
 				<div class="restaurantes">
 				<p> <strong>Comer en el barrio chino es sumergirte en la comida asiática.</strong> Todo dependerá de tus gustos pero todos los lugares guardan las tradiciones de la cultura.<br />
 				Muchos restaurantes los encontrarás en la avenida Spadina.
@@ -90,25 +114,33 @@
 			<section class="barrios">
 			<h2 class="headersBarrios" id="anclaTres">El Danforth</h2>
 				<div class="contenedorImg">
-				<img src="imagenes/danforth.jpg" alt="Multitud de gente en el Danforth"/>
+				<picture>
+					<source srcset="imagenes/mobile-danforth.jpg" media="(max-width: 480px)" />
+					<source srcset="imagenes/tabletdanforth.jpg" media="(max-width: 800px)" />
+					<img src="imagenes/danforth.jpg" alt="Multitud de gente en el Danforth"/>
+				</picture>
 				</div>
 				<div class="presentacionBarrio">
 				<p>Conocido por la fuerte cultura griega presente en la arquitectura y costumbres de los lugareños, <strong>The Danforth</strong> es un área en constante cambio que <strong>se ha transformado en uno de los mejores puntos turísticos de la ciudad.</strong> </p>
 				<p>El Danforth es un distrito cosmopolita emocionante lleno de buena comida, impresionantes parques, arte y una multitud de culturas que complementan su tejido helénico.</p>
-				<p><strong>Vale la pena visitarlo y comer en uno de sus muchos restaurantes.</strong> No es la zona mas barata de la ciudad, pero la comida y los negocios del barrio realmente te dejarán maravillado</p> 
+				<p><strong>Vale la pena visitarlo y comer en uno de sus muchos restaurantes.</strong> No es la zona mas económica de la ciudad, pero la comida y los negocios del barrio realmente te dejarán maravillado</p> 
 				</div>
 			</section>
 			<section class="barrios barriosWhite">
 			<h2 class="headersBarrios" id="anclaCuatro">Llegando a Little Italy</h2>
 				<div class="contenedorImg">
-				<img src="imagenes/littleitaly.jpg" alt="Cartel de Palmerston Boulevard"/>
+				<picture>
+					<source srcset="imagenes/mobile-littleitaly.jpg" media="(max-width: 480px)" />
+					<source srcset="imagenes/tabletlittleitaly.jpg" media="(max-width: 800px)" />
+					<img src="imagenes/littleitaly.jpg" alt="Cartel de Palmerston Boulevard"/>
+				</picture>	
 				</div>
 				<div class="presentacionBarrio">
-				<p><strong><span lang="en">Little Italy</lang> se extiende principalmente a lo largo de la calle College de Toronto</strong>, donde muchos patios en las aceras hacen que la calle sea una de las más emocionantes para caminar en la ciudad. <br />
+				<p><strong>Little Italy se extiende principalmente a lo largo de la calle College de Toronto</strong>, donde muchos patios en las aceras hacen que la calle sea una de las más emocionantes para caminar en la ciudad. <br />
 				Descubre los mejores restaurantes, bares, cafeterías e instituciones culturales que lo convierten en el destino que es, ¡y disfruta de la cultura italiana mientras lo haces!</p>
-				<p><strong>¡Otra gran cosa sobre <span lang="en">Little Italy</lang> es que está cerca de todo!</strong> Un pequeño paseo al sur lo llevará al moderno oasis del parque Trinity Bellwoods , y un viaje hacia el este lo llevará al corazón del mercado de Kensington</p>
+				<p><strong>¡Otra gran cosa sobre Little Italy es que está cerca de todo!</strong> Un pequeño paseo al sur lo llevará al moderno oasis del parque Trinity Bellwoods , y un viaje hacia el este lo llevará al corazón del mercado de Kensington</p>
 				</div>
-				<h3> Restaurantes </h3>
+				<h3 class="notForMobile"> Restaurantes </h3>
 				<div class="restaurantes">
 				<p> La escena culinaria en Little Italy es mucho más que pizza y pasta, ¡pero por supuesto también lo tiene!</p>
 				<p><strong>Alguno de los restaurantes más reconocidos de la ciudad están en este barrio</strong>. Por ejemplo "DaiLo", quien está en el puesto número 15 entre los 100 mejores restaurantes de Canada.
@@ -118,7 +150,11 @@
 			<section class="barrios">			
 			<h2 class="headersBarrios" id="anclaCinco">Tiempo de relajarnos: <span lang="en">Little Portugal</span></h2>
 			<div class="contenedorImg">
+			<picture>
+				<source srcset="imagenes/mobile-westdundas.jpg" media="(max-width: 480px)" />
+				<source srcset="imagenes/tabletwestdundas.jpg" media="(max-width: 800px)" />
 				<img src="imagenes/westdundas.jpg" alt="Barrio West Dundas"/>
+			</picture>
 			</div>
 			<div class="presentacionBarrio">
 			<p><strong>En este barrio encontramos una vibra del Viejo Mundo mezclada con la fuerza moderna de Toronto.</strong> A partir de la década de 1950, miles de inmigrantes portugueses hicieron su primer hogar en este área del extremo oeste.</p>
@@ -126,6 +162,14 @@
 			<p>En este barrio encontraremos la Dundas Street West, un destino de ropa vintage y moda y con una próspera vida nocturna. <strong>Algunos de los bares y restaurantes más aclamados de Toronto se encuentran en este lugar.</strong></p>
 			</div>
 			</section>
+			<section class="galeriaImagenes">
+			<h2 class="headersBarrios">Galería de la ciudad</h2>
+			<div class="fotorama" data-width="700" data-ratio="700/467" data-max-width="100%">
+			<img src="imagenes/ripley.jpg" alt="Acuario Ripley">
+			<img src="imagenes/rom.jpg" alt="Museo Real de Ontario">
+			<img src="imagenes/cityhall.jpg" alt="Ayuntamiento de Toronto">
+			</div>
+			</section>			
 			</main>
 			<footer>
 			<div class="margenFooter">
@@ -178,7 +222,7 @@
 				
 			<details>
 			<summary><span>Datos de la entrega</span></summary>
-			<p>Julian Preiss - Maquetado HTML/CSS - Prof. Mabel García - TP2: Diseño web de una ciudad</p>
+			<p>Julian Preiss - Maquetado HTML/CSS - Prof. Mabel García - TP Final: Diseño web de una ciudad</p>
 			</details>
 			</div>
 			</footer>
@@ -186,5 +230,6 @@
 
 			
 </div>	
+	<script src="script/main.js"></script>
 </body>
 </html>

@@ -1,257 +1,127 @@
-/* INDEX INDEX INDEX INDEX*/
-*{margin: 0px;}
-
-main, nav, header, footer{display:block;}
-
-@font-face {
-    font-family: 'Hamburg Hand';
-    src: url(tipografia/'HamburgHandRegular.eot');
-    src: url(tipografia/'HamburgHandRegular.eot?#iefix') format('embedded-opentype'),
-        url(tipografia/'HamburgHandRegular.woff2') format('woff2'),
-        url(tipografia/'HamburgHandRegular.woff') format('woff'),
-        url(tipografia/'HamburgHandRegular.ttf') format('truetype'),
-        url(tipografia/'HamburgHandRegular.svg#HamburgHandRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-
-body{font-family:"Montserrat";
-	}
-
+/* INDEX INDEX INDEX INDEX*/ 
 #cuerpo{
-	width: 320px;
-	background:#FFFFFF;
-	overflow:hidden;
+	font-size: 100%;
 	}
-	
-.letraBold {
-	font-weight: bold;
-	}
-	
-.letraItalica {
-	font-style: italic;	
-	}
+
 
 /* ===============
 	   HEADER
    =============== */
 	
 header {
-background: rgb(10,0,172);
-background: linear-gradient(90deg, rgba(10,0,172,1) 0%, rgba(0,188,226,1) 93%, rgba(193,247,255,1) 100%);
-width:100%
-}
-
-header::after {
-  content: '';
-  display: table;
-  clear: both;
+width:100%;    
 }
 
 #toronto{
-	font-family: "Hamburg Hand";
-	color: red;
-	font-size: 30px;
-	display:inline-block;
-    position: relative;
-	top:4px;
+	font-size: 2em;
+	width:250px;
+	margin-left:18%;
+	top:-30px;
 	}
 
-#canada {
-	color: black;
-	}
-
-nav {
-	padding-left:50px;
-	}
+/*Este video me ayudó a armar el icono con movimiento del menu hamburguesa:    https://www.youtube.com/watch?v=dIyVTjJAkLw
+Luego reutilizé algunas partes del codigo javascript y diseñé por mi cuenta la función que despliega el menú.*/
 	
-nav ul {
-	display:inline-block;
-	}
-	
-nav li{
-  display: inline-block;
-  margin-left: 70px;
-  padding: 10px 0px 15px;
-  font-weight:800;
+.botonMenu {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  top: 13px;
+  }
+  
+.menuHamburguesa{
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
 }
+
+.botonMenu.open .menuHamburguesa {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.botonMenu.open .menuHamburguesa::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.botonMenu.open .menuHamburguesa::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+	
+.menuHamburguesa::before,
+.menuHamburguesa::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menuHamburguesa::before {
+  transform: translateY(-10px);
+}
+.menuHamburguesa::after {
+  transform: translateY(10px);
+  }
 
 nav li a {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1em;
 } 
 
-nav li a:hover {
-  color: #444444;
-}
-
 nav li a::before {
-  content: '';
-  display: block;
-  height: 5px;
-  background-color: #444444;
-  position: absolute;
-  top: 0;
-  width: 0%;
-  transition: all ease-in-out 250ms;
+  display: none;
 }
 
 nav li a:hover::before {
   width: 100%;
 }
 
-
-
-	
-.contenedorImagen {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-	}
-	
 .imagenciudad {	
 	background-image: url(imagenes/skyline2mobile.jpg);
-	width:320px;
-	height:198px;
-	position: relative;
-	}	
+	height: 297px;
+	width:100%;
+	}
 	
 .textoImagen{
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	font-family: "Hamburg Hand";
-	font-size: 60px;
-	color: white;
-	}
-		
-	
-#presentacion{
-	text-align:center;
-	font-weight: regular;
-	font-size: 26px;
-	margin-top: 70px;
-	margin-bottom: 70px;	
-	}
-	
-.grupoRecuadros {
-	width:185px;
-	margin-right:auto;
-	margin-left: auto;
-	text-align: center;
-	padding-left: 0px;
+	font-size: 5em;
+	overflow:hidden;
 	}
 	
 .grupoRecuadros li{
-	display:inline-block;
-	width:180px;
-	height:220px;
 	margin-bottom:20px;
-	margin-right: auto;
-	margin-left: auto;
+	margin-right: 8px;
+	margin-left: 8px;
 	background-color: #b7b6fd;
-	background-repeat: no-repeat;
-	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
-	border-radius: 4px;
-	text-align: center;
 	}
 	
-.grupoRecuadros li:last-child {
-	margin-bottom:-20px;
-	}
-
-.grupoRecuadros li:hover {
-	background-color: #7766fd;
-	}
-	
-.textoBajo {
-	padding-top: 180px;
-	width:220px;
-	display: block;
-	font-size:20px;
-	position:relative;
-	left:-20px;
-	}
-
-/*iconos*/
-#comoLlegar {
-	background-image: url(imagenes/plane.png);
-	}
-#mapa {
-	background-image: url(imagenes/map.png);
-	}
-#transporte {
-	background-image: url(imagenes/train.png);
-	}
-#compras {
-	background-image: url(imagenes/shop.png);
-	}
-#alojamiento {
-	background-image: url(imagenes/hotel.png);
-	}
-#night {
-	background-image: url(imagenes/cocktail.png);
-	}
-#deportes {
-	background-image: url(imagenes/kayak.png);
-	}
-#eventos {
-	background-image: url(imagenes/ticket.png);
+.grupoRecuadros:last-of-type{
+	display:none;
 	}
  
 #tituloInfo{
-	text-align:center;
 	font-size: 30px;
-	padding-top:20px;
+	margin-top:20px;
 	margin-bottom: 30px;
 	}
 
-#informacion {
-	background:  none;
-	height:650px;
-	}
-#recuadroTexto {
-	width:300px;
-	margin: 0 auto;
-	background-color:rgba(255,255,255,0.7);
-	margin-bottom: 10px;
-	height:800px;
-	}
-	
-.textoInfo:last-child {
-	display:none;
-	}
-	
-.textoInfo{
-	font-weight: regular;
-	font-size: 16px;
-	margin-left:15px;
-	margin-right:15px;
-	padding-top: 8px;
-	}
-	
-#infosCortas {
-	background-color: #edeffc;
-	padding-bottom: 50px;
-	}
-	
-#tituloVisitas {
-	text-align: center;
-	padding-top: 50px;
-	padding-bottom: 30px;
-	width:300px;
-	margin: 0 auto;
-	}
 
 #tarjetasInfo {
 	width:320px;
 	margin: 0 auto;
+	padding: 0;
 	}
 	
 #tarjetasInfo li {
@@ -259,14 +129,10 @@ nav li a:hover::before {
 	width:248px;
 	height:250px;
 	background-color: white;
-	margin-right: 0px;
+	margin-left: 36px;
 	margin-bottom: 15px;
 	vertical-align:top;
 	box-shadow: 2px 2px 5px #666;
-	}
-
-.imagenTarjeta {
-	vertical-align:top
 	}
 
 #tarjetasInfo li p {
@@ -274,139 +140,80 @@ nav li a:hover::before {
 	font-size: 13px;
 	}
 	
-#imagenesDescriptivas {
-	height:0px;
-	background-color: #white;
-	}
-	
-#audiovisual {
-	background-color: white;
-	padding-bottom: 50px;
-	}
-	
-#videoToronto {
-	text-align: center;
-	}
-
-#audiovisual h2 {
-	padding-top: 50px;
-	padding-bottom: 30px;
-	font-size: 30px
-	}
-
-#audiovisual p {
-	padding-bottom: 30px;
-	width:300px;
-	margin: 0 auto;
-	}
 
 iframe {
-	width:320px;
-	height:260px;
+	width:95%;
 	}
 
-/*Boton aprendido con tutorial de Freecodecamp
-Link: https://www.youtube.com/watch?v=pmKyG3NBY_k&list=PLWKjhJtqVAbl1AfjiGyYxwpdAPi5v-1OU&index=2&t=0s */	
 .botonAnimado {
-	position: relative;
-	display: inline-block;
-	padding: 20px 40px;
-	font-size: 1.4rem;
-	background-color: hsla(248, 41%, 57%, 1);
-	background-size: 40px 40px;
-	border: none;
-	color: white;
-	transition: all ease 0.3s;
-	margin-left:50px;
-	margin-bottom: 30px;
-	margin-top: 30px;
-	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
-	}	
-	
-.botonAnimado::after {
-	position: absolute;
-	top: 30%;
-	right: 0.6em;
-	content: ">>";
-	transition: all ease 0.3s;
-	opacity: 0;
+	width:160px;
+    text-decoration: none;
 	}
 	
-.botonAnimado:hover {
+.botonAnimado:active {
 	padding: 20px 60px 20px 20px;
 	}
 	
-.botonAnimado:hover::after {
+.botonAnimado:active::after {
 	right: 1.2em;
 	opacity:1;
-	}	
+	}		
+
 /*FOOTER FOOTER FOOTER FOOTER FOOTER*/
-	
-footer {
-	height:650px;
-	background-color: #edeffc;
-
-	}
-
-.margenFooter {
-	margin-left: 20px;
-	}
-
-.columnasFooter {
-	width: 320px;
-	display: inline-block;
-	vertical-align:top;
-	}
 
 .columnasFooterAncha {
-	width: 320px;
-	display: inline-block;
-	vertical-align:top;
+	display:none;
 	}
 	
-.titulosFooter {
-	font-size: 40px;
-	padding-top: 40px;
-	margin-left: 0px;
-	font-weight: bold;
-	
+.columnasFooter {
+	width: 100%;
+	display: inline-block;
+	vertical-align:top;
+	padding: 5% 0;
+	margin-left:auto;
+	margin-right:auto;
+	display:flex;
 	}
 	
 .columnasFooter li ,.columnasFooterAncha li{
 	display: block;
-	font-size: 25px;
+	font-size: 1.1em;
 	padding-top: 10px;
-	margin-left: 0px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-left:0px;
-	}
+	}	
 
 .segundaFila {	
 	display: block;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:0px;
 	}
 	
 .descarga {
-	font-size: 25px;
-	padding-top: 40px;
-	margin-left: 40px;
+	font-size: 1.5em;
+	padding-top: 0px;
+	margin-top:40px;
+	padding-right:0px;
+	margin-left:auto;
+	margin-right:auto;
+	width:70%;
 	font-weight: bold;
-	display: inline-block;
+	display:block;
 	}
 
 .ofertas {
-	font-size: 25px;
-	padding-top: 40px;
-	margin-left: 40px;
-	font-weight: bold;
-	display: inline-block;
+	display: none;
 	}
 
 #apple, #android {
-	margin-top: 15px;
-	margin: 0 58px 0 38px;
+	margin: 15px auto;
 	padding: 0;
 	width:204px;
 	height:56px;	
-	display: inline-block;
+	display: block;
 	font-size: 0px;
 	}
 	
@@ -422,8 +229,10 @@ footer {
 	width:64px;
 	height:64px;
 	display:inline-block;
-	margin-left: 40px;
+	margin-left:20%;
+	margin-right:auto;	
 	margin-bottom:8px;
+	margin-top:40px;
 	position: relative;
 	}
 	
@@ -476,31 +285,33 @@ summary {
 	}
 
 .lineaDivisoria {
-	margin-top: 15px;
+	margin-left:auto;
+	margin-right:auto;
 	height: 1 px;
 	width:100%;
 	border: solid 1px;
+	display:block;
 	}
 
 /*LUGARES LUGARES LUGARES LUGARES LUGARES*/
 
+.contenedorImagen{
+	width:100%
+	}
+
 .imagengaleria {	
-	background-image:linear-gradient(
+	background-image: linear-gradient(
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.5)),
-	url(imagenes/artgallery.jpg);
-	width:1366px;
-	height:747px;
-	position: relative;
+	  url(imagenes/mobile-artgallery.jpg);
+	height: 352px;
+	width:100%;
 	}
 
 .contenedorSobreImagen {
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 40px;
-	width: 900px;
+	width: 90%;
 	border: solid 1px;
-	margin-top: -150px;
+	margin-top: -100px;
 	z-index: 1;
     position:relative;
 	background-color: #EEEEEE;
@@ -508,146 +319,115 @@ summary {
 	}
 	
 .contenedorSobreImagen  p {
-	font-size: 35px;
-	padding: 30px;
-	}
-	
-.colorRojo {
-	color:red;
-	font-weight:bold;
+	font-size: 1.1em;
+	padding: 12px;
 	}
 
+/*AJUSTAR TAMAÑOS DESDE PHOTOSHOP*/
 #menuAtracciones {
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom:30px;
-	width:450px;
-	height: 80px;
+	width:315px;
+	height: 58px;
     list-style: none;
+	position: relative;
+	left:-6%;
 	}
 
 .iconos {
-	width:80px;
-	height:80px;
-	float: left;
+	width:58px;
+	height:58px;
 	margin-right: 5px;
+	float:left;
 	}
 	
 .iconos a{
-	width:80px;
-	height:80px;
+	width:58px;
+	height:58px;
 	display: inline-block;
 	font-size:0px;
 	}
 	
-#dt {
-	background: url(imagenes/spritebarrios.png) 0 0;
-	transition: 0.4s all;
-	}
-#dt:hover {
-	background: url(imagenes/spritebanderas.png) 0 0;
-	transform: rotate(360deg);
-	}
-#ct {
-	background: url(imagenes/spritebarrios.png) -80px 0;
-	transition: 0.4s all;
-	}
-#ct:hover {
-	background: url(imagenes/spritebanderas.png) -80px 0;
-	transform: rotate(360deg);
-	}
-#dan {
-	background: url(imagenes/spritebarrios.png) -160px 0;
-	transition: 0.4s all;
-	}
-#dan:hover {
-	background: url(imagenes/spritebanderas.png) -160px 0;
-	transform: rotate(360deg);
-	}
-#lit {
-	background: url(imagenes/spritebarrios.png) -240px 0;
-	transition: 0.4s all;
-	}
-#lit:hover {
-	background: url(imagenes/spritebanderas.png) -240px 0;
-	transform: rotate(360deg);
-	}
-#lp {
-	background: url(imagenes/spritebarrios.png) -320px 0;
-	transition: 0.4s all;
-	}
-#lp:hover {
-	background: url(imagenes/spritebanderas.png) -320px 0;
-	transform: rotate(360deg);
+#dt, #dt:hover {
+	background: url(imagenes/mobile-spritebarrios.png) 0 0;
+	transition: 0;
 	}
 	
-.barrios{
-	background-color:#edeffc;
-	padding-bottom:20px;
+#ct, #ct:hover  {
+	background: url(imagenes/mobile-spritebarrios.png) -58px 0;
+	transition: 0;
 	}
-	
-.headersBarrios {
-		padding-top: 50px;
-		padding-bottom: 30px;
-		text-align:center;
-		font-size: 40px;
-		}
+
+#dan, #dan:hover {
+	background: url(imagenes/mobile-spritebarrios.png) -116px 0;
+	transition: 0;
+	}
+
+
+#lit, #lit:hover {
+	background: url(imagenes/mobile-spritebarrios.png) -174px 0;
+	transition: 0;
+	}
+
+#lp, #lp:hover  {
+	background: url(imagenes/mobile-spritebarrios.png) -232px 0;
+	transition: 0;
+	}
 		
 .contenedorImg {
-	margin-left: auto;
-	margin-right: auto;
-	width: 1166px;
+	width: 100%;
 	}
 	
 .presentacionBarrio {
-	width: 650px;
-	margin-left:auto;
-	margin-right:auto;
-	padding-top: 50px;
+	width: 90%;
 	}
 	
 .presentacionBarrio p {
 	padding-bottom: 10px;
+	font-size: 14px;
+	margin-left:auto;
+	margin-right:auto;
 	}
 	
 .barrios h3
 	{text-align: center;
-	font-size: 27px;
+	font-size: 1.7em;
 	margin: 30px 0px;
 	}
 		
 .columnaInfo{
-	width: 350px;
-	display:inline-block;
-	margin-left:75px;
+	width: 80%;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
 	vertical-align: top;
-	box-shadow: 2px 2px 5px #666;
-	background-color: rgba(255,255,255,0.7);
-	height:320px;
+	height:auto;
 	border-top-left-radius: 50px;
 	border-bottom-right-radius: 50px;
 	margin-bottom: 30px;
+	padding-bottom:20px;
 	}
 
-.columnaInfo h4 {
-	text-align:center;
-	font-size:20px;
-	padding-top:30px;
-	font-family: "Hamburg Hand";
-	text-transform: uppercase;
-	color: hsl(235, 48%, 19%); 
+.notForMobile{
+	display:none;
+	}
+	
+.barrios .restaurantes {
+	display:none;
 	}
 
 .columnaInfo p{
 	margin: 10px 20px;
-	font-size: 13px;
+	font-size: 0.9em;
 	line-height : 16px;
 	}
 	
 .restaurantes {
-	width: 650px;
+	width: 90%;
 	margin-left:auto;
 	margin-right:auto;	
+	font-size: 0.9em;
 	}
 	
 .barriosWhite{
@@ -655,190 +435,79 @@ summary {
 	padding-bottom:60px;
 	}
 	
-abbr { 
-	text-decoration:none;
-	}
-
 /* INFORMACION INFORMACION INFORMACION INFORMACION*/
-
-.secciones {
-	text-align: center;
-	margin-top: 50px;
-	margin-bottom:40px;
-	font-size:40px;
-	font-family: "Hamburg Hand";
-	}
-	
-.noticiaPrincipal {
-		width: 960px;
-		height: 350px;
-		margin-left: auto;
-		margin-right: auto;
-		background-color: #efefef;
-		box-shadow: 2px 2px 5px #666;
-		}
-		
-.noticiaPrincipal img {
-	display: inline-block;
-	}
-
-.noticiaPrincipalTexto {
-	width:400px;
-	height: 350px;
-	display: inline-block;
-	vertical-align:top;
-	}
-
-.noticiaPrincipalTexto h3{
-	display: block;
-	width: 320px;
-	margin-left: 50px;
-	margin-top:20px;
-	font-size: 25px;
-	font-family: "Hamburg Hand";
-	}
-
-.noticiaPrincipalTexto p {
-	display: block;
-	width: 300px;
-	vertical-align:top;
-	font-size: 14px;
-	font-weight:500;
-	margin-left: 50px;
-	margin-top: 20px;
-	}
-
-.grupoRecuadrosDos {
-	margin: 0 auto;
-	width:970px;
-	}
-	
-.grupoRecuadrosDos .tarjetasNoticias{
-	display:inline-block;
-	width:300px;
-	height:300px;
-	margin-right: 30px;
-	background-color: #b7b6fd;
-	background-repeat: no-repeat;
-	vertical-align:top;
-	box-shadow: 2px 2px 5px #666;
-    position: relative;
-	}
-	
-.tarjetasNoticias:last-child{
-	margin-right: 0px;
-	}
-
-
-.imagenNoticia {
-  display: block;
-}
-
-.tarjetaDesli {
-  position: absolute;
-  bottom: 100%;
-  background-color: hsla(224, 100%, 50%, 0.8);
-  overflow: hidden;
-  width: 100%;
-  height:0;
-  transition: .5s ease;
-}
-
-.tarjetasNoticias:hover .tarjetaDesli{
-  bottom: 0;
-  height: 100%;
-}
-
-.tarjetaDesli h3{
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  margin: 20px;
-}
-
-.tarjetaDesli p {
-  color: white;
-  font-size: 14px;
-  text-align: center;
-  margin: 0px 20px;
-	}
-	
-.cajaLinea {
-	border: solid 1px;
-	}
-
-.lineaColorGradiente {
-	height: 1px;
-	padding: 2px;
-	background-color: #7CB9E8;
-	width: 400px;
-	margin: 70px auto;
-	display: block;
-	transform: skewx(30deg);
-	transform-origin: bottom left;
-	}
-	
 .videoPadding {
-	margin: 50px 0px;
-	margin-left:30px;
+	margin: 50px auto;
+	width: 95%;
+	}
+	
+.noticiaPrincipal img {
+	width:100%
 	}
 	
 /* CONTACTO CONTACTO CONTACTO CONTACTO*/
-
-#fondoFormulario{
-	background-color: hsl(0, 0%, 98%);
-	padding-top: 30px;
-	padding-bottom: 30px;
-	}
 	
 .contenedor{
-	margin:50px 400px;
-	padding:0px 0px 25px 60px;
-	background:white url(imagenes/torre-cn.png) no-repeat;
-	background-position: 370px 300px;
-	border:solid 1px #AAAAAA;
-	box-shadow: 2px 2px 5px #666;
-	overflow:auto;
-	border-radius: 10px;	
+	margin:50px auto;
+	padding:0px 0px 25px 0px;
+	background-image:none;
+	width:97%
 	}
 	
 .lineaColor {
-	width: 561px;
-	margin-left:-59px;
+	width: 100%;
+	margin-left:0px;
 	margin-bottom: 30px;
 	height: 4px;
 	background-color: #0040ff;
 	}
 	
 .contenedor h1 {
-	margin-left: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 220px;
+	display: block;
 	padding-bottom: 20px;
 	}
 	
-.contenedor p {
-	padding-top: 7px;
-	padding-bottom: 7px;
-	font-size: 15px;
-	}
-	
-.contenedor p b {
-	font-size:17px;
-	}
-	
-form span{
+.form span{
 	display: block;
 	padding-top:10px;
+	margin-bottom:15px;
 	color: blue;
 	font-weight:bold;
+	margin-left: auto;
+	margin-right: auto;
+	font-size:1em;
+	width:90%;
 	}
 	
 form input{
-	width:350px;
-	padding:5px;
+	width:90%;
+	padding:5px 0;
 	margin-bottom: 10px;
+	margin-top:5px;
+	margin-left: auto;
+	margin-right: auto;	
+	display:block;
 	}
-.casilla {
-	width: 40px;
+	
+#country {
+	padding:5px 0;
+	margin-bottom: 10px;
+	margin-top:5px;
+	margin-left: 5%;
+	margin-right: auto;	
+	display:block;
+	}
+	
+fieldset {
+	margin-left: 5%;
+	width:80%;
+	}
+	
+.extraMargin {
+	margin-top:10px;
 	}
 
 select {
@@ -846,201 +515,92 @@ select {
 	margin-bottom: 7px;
 	}
 	
-.form div {
-	padding-top:7px;
-	}
-	
-.form span {
-	width: 400px;
-	font-size: 15px;
-	}
-	
 .inputEstilo{
-	margin:10px 0px;
-	}
-	
-#envio {
-	box-shadow: inset 0 1px 0 0 #4d73bf;
-	background: #4627b2;
-	border: solid 1px #4627b2;
-	color: white;
-	text-shadow: 0 1px 0 #3359a5;
-	width: 100px;
-	margin-left:175px;
-	margin-top: 20px;
+	padding:5px 0;
 	margin-bottom: 10px;
-	border-radius: 10px
+	margin-top:5px;
+	margin-left: 5%;
+	margin-right: auto;	
+	display:block;
 	}
-	
-#envio:hover {
-	background: #2b54a7;
-	}
-	
-#envio:active {
-	background: #1d4698;
-	border-color: #1d4698;
-	}
-	
-	
+
 /* ========================
 	GRACIAS GRACIAS GRACIAS
-   ========================	*/
-   
-.primertitulo {
-	text-align: center;
-	width: 600px;
-	margin-top: 90px;
-	margin-left: auto;
-	margin-right: auto;
-	color: hsl(234, 12%, 34%);
-	}
-
-.primertitulo h1 {
-	font-weight:100;
-	font-size: 35px;
-	}
-	
-.subtitulo {
-	font-weight: 600;
-	font-size: 37px;
-	margin-top: 20px;
-	}
-
-.informacion {
-	color: hsl(229, 6%, 66%);
-	font-size:14px;
-	margin-top: 20px;
-	margin-bottom: 50px;
-	}
-	
+   ========================	*/	
 .tarjetas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 30px;
-  column-gap: 30px;
-  grid-auto-rows: 100px;
-  width: 960px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 50px;
   color: hsl(234, 12%, 34%);
   }
   
-.tarjetas .uno, .tarjetas .dos, .tarjetas .tres, .tarjetas .cuatro{ 
-  border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  background-color: white;
-  }
-  
- .lineafina {
-	box-shadow: none;
-	width: 320px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-bottom:4px;
-	border: none;
-    border-radius: 10px 10px 0px 0px;
-	}
-	
-.celeste {
-	background-color: hsl(180, 62%, 55%);
-	}
-	
-.rojo {
-	background-color: hsl(0, 78%, 62%);
-	}
-	
-.naranja {
-	background-color: hsl(34, 97%, 64%);
-	}
-	
-.azul {
-	background-color: hsl(212, 86%, 64%);
+/* ========================
+	     ALOJAMIENTO
+   ========================	*/
+   
+.torontoheader{
+	font-size: 2em;
+	width:250px;
+	margin-left:18%;
+	top:-30px;
 	}
   
-.tarjetas h2 {
-	margin: 0px;
-	padding: 0px;
-	font-size: 18px;
-	padding: 20px 25px 10px 30px;
+ .imagenHotel {	
+	background-image: url(imagenes/mobile-hoteles.jpg); 
+	height:240px;
+	}
+	
+#contenidoBarra {
+	width:250px;
+	}
+	
+.iconografia{
+	margin-left:0px;
+	}
+	
+.iconografia:first-of-type{
+	margin-left:0px;
+	}
+	
+.seccionReserva {
+	width:85%
+	}
+	
+.seccionReserva img{
+	display:block;
+	width:auto;
+	margin: 10px auto;
 	}
 
-.tarjetas p {
-	padding: 0px 25px 24px 30px;
-	margin-right: 20px;
-	color: hsl(229, 6%, 66%);
-	font-size:12px;
+.seccionReserva p{	
+	margin: 10px auto;
+	}
+	
+.tarjetaHoteles img {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;	
+	}
+	
+.tarjetaHoteles{
+	flex-direction: column;
+	text-align:center;
+	}
+	
+.tarjetaHoteles p{
+	display:none;
+	}
+	
+ 	
+.ubicacion{
+	width:80%;
+	margin: 10px auto;
 	}	
 	
-.uno {
-  grid-column: 1;
-  grid-row: 2 / 4;
-
-}
-.dos { 
-  grid-column: 2;
-  grid-row: 1 / 3;
-}
-.tres {
-  grid-column: 2;
-  grid-row: 3 / 5;
-}
-.cuatro {
-  grid-column: 3;
-  grid-row: 2 / 4;
-  }
-  
-.botonInfo {
-	margin-left:30px;
-	margin-top:22px;
-	width:50px;
-	height:26px;
-	border: none;
-	color: white;
-	border-radius:5px;
-	box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
+.resena{
+	display:none;
 	}
 	
-.botonInfo:hover {
-	opacity: 0.9;
-	width:55px;
-	height:30px;
-	}
-	
- .iconos {
-	width:64px;
-	height:64px;
-    float: right;
-	margin-right:30px;
-	box-shadow: none;
-	}
-	
-#robot {
-	background-image: url(imagenes/robot.png);
-	margin-top: -15px;
-	}
-	
-#mickjagger {
-	background-image: url(imagenes/mickjagger.png);
-	}
-	
-#davegrohl{
-	background-image: url(imagenes/davegrohl.png);
-	}
-	
-#mujergorra {
-	background-image: url(imagenes/ballcap.png);
-	}
-	
-.attribution {
-	text-align: center;
-	padding-top:50px;
-	}
-   
-   
-   
-   
-   
-   
-   
-   

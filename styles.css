@@ -3,17 +3,9 @@
 
 main, nav, header, footer{display:block;}
 
-@font-face {
-    font-family: 'Hamburg Hand';
-    src: url(tipografia/'HamburgHandRegular.eot');
-    src: url(tipografia/'HamburgHandRegular.eot?#iefix') format('embedded-opentype'),
-        url(tipografia/'HamburgHandRegular.woff2') format('woff2'),
-        url(tipografia/'HamburgHandRegular.woff') format('woff'),
-        url(tipografia/'HamburgHandRegular.ttf') format('truetype'),
-        url(tipografia/'HamburgHandRegular.svg#HamburgHandRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+img {
+  width: 100%;
+  height: auto;
 }
 
 
@@ -21,8 +13,9 @@ body{font-family:"Montserrat";
 	}
 
 #cuerpo{
-	width: 1366px;
+	width: 100%;
 	background:#FFFFFF;
+	overflow:hidden;
 	}
 	
 .letraBold {
@@ -40,6 +33,7 @@ body{font-family:"Montserrat";
 header {
 background: rgb(10,0,172);
 background: linear-gradient(90deg, rgba(10,0,172,1) 0%, rgba(0,188,226,1) 93%, rgba(193,247,255,1) 100%);
+width:100%
 }
 
 header::after {
@@ -59,6 +53,10 @@ header::after {
 
 #canada {
 	color: black;
+	}
+	
+.hambur {
+	display: none;
 	}
 
 nav {
@@ -101,22 +99,27 @@ nav li a::before {
 
 nav li a:hover::before {
   width: 100%;
-}
-
-
-
-	
+}	
 .contenedorImagen {
     position: relative;
     display: inline-block;
     text-align: center;
+	width:100%
 	}
+	
+main{ 
+width: 100% 
+}
 	
 .imagenciudad {	
 	background-image: url(imagenes/skyline2.jpg);
-	width:1366px;
-	height:846px;
-	position: relative;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	overflow:hidden;
+	height: 850px;
+	width:100%;
+	position:relative;
 	}	
 	
 .textoImagen{
@@ -139,20 +142,28 @@ nav li a:hover::before {
 	}
 	
 .grupoRecuadros {
-	padding:0px 0px 0px 168px;
+	padding:0px 0px 0px 0px;
 	margin-bottom: 50px;
+	margin-right:auto;
+	margin-left:auto;
+	width:700px;
 	}
+	
+.grupoRecuadros li:last-child{
+		margin-right: 0px;
+		}
 	
 .grupoRecuadros li{
 	display:inline-block;
-	width:220px;
-	height:275px;
-	margin-right: 57px;
+	width:140px;
+	height:190px;
+	margin-right: 40px;
 	background-color: #b7b6fd;
 	background-repeat: no-repeat;
 	background-position:50% 30%;
 	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
 	border-radius: 4px;
+	text-align:center;
 	}
 
 .grupoRecuadros li:hover {
@@ -160,11 +171,12 @@ nav li a:hover::before {
 	}
 	
 .textoBajo {
-	padding-top: 200px;
+	padding-top: 160px;
 	width:220px;
-	text-align:center;	
-	display: inline-block;
-	font-size:24px;
+	display: block;
+	font-size:16px;
+	position:relative;
+	left:-40px;
 	}
 
 /*iconos*/
@@ -195,19 +207,27 @@ nav li a:hover::before {
  
 #tituloInfo{
 	text-align:center;
-	font-size: 65px;
+	font-size: 3.6em;
 	padding-top:50px;
-	margin-bottom: 70px;
+	margin-bottom: 40px;
 	}
 
 #informacion {
 	background: url(imagenes/aereaciudad.jpg) no-repeat;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	overflow:hidden;
+	width:100%;
+	position:relative;
 	height:522px;
 	}
 #recuadroTexto {
-	width:1086px;
-	height:240px;
-	margin-left:165px;
+	width:800px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom:10px;
 	background-color:rgba(255,255,255,0.7)
 	}
 	
@@ -293,6 +313,10 @@ Link: https://www.youtube.com/watch?v=pmKyG3NBY_k&list=PLWKjhJtqVAbl1AfjiGyYxwpd
 	margin-bottom: 30px;
 	margin-top: 30px;
 	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
 	}	
 	
 .botonAnimado::after {
@@ -315,9 +339,8 @@ Link: https://www.youtube.com/watch?v=pmKyG3NBY_k&list=PLWKjhJtqVAbl1AfjiGyYxwpd
 /*FOOTER FOOTER FOOTER FOOTER FOOTER*/
 	
 footer {
-	height:650px;
+	height:auto;
 	background-color: #edeffc;
-
 	}
 
 .margenFooter {
@@ -458,9 +481,12 @@ summary {
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.5)),
 	url(imagenes/artgallery.jpg);
-	width:1366px;
+	width:100%;
 	height:747px;
 	position: relative;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
 	}
 
 .contenedorSobreImagen {
@@ -584,6 +610,12 @@ summary {
 	font-size: 27px;
 	margin: 30px 0px;
 	}
+	
+.contenedorImg {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	}
 		
 .columnaInfo{
 	width: 350px;
@@ -627,6 +659,12 @@ summary {
 abbr { 
 	text-decoration:none;
 	}
+	
+.fotorama{
+	margin: 30px auto;	
+	width:700px;
+	}
+
 
 /* INFORMACION INFORMACION INFORMACION INFORMACION*/
 
@@ -639,16 +677,18 @@ abbr {
 	}
 	
 .noticiaPrincipal {
-		width: 960px;
+		width: 900px;
 		height: 350px;
 		margin-left: auto;
 		margin-right: auto;
 		background-color: #efefef;
 		box-shadow: 2px 2px 5px #666;
+		display:block;
 		}
 		
 .noticiaPrincipal img {
 	display: inline-block;
+	width: 480px;
 	}
 
 .noticiaPrincipalTexto {
@@ -761,13 +801,14 @@ abbr {
 	}
 	
 .contenedor{
-	margin:50px 400px;
+	margin:50px auto;
+	width:502px;
 	padding:0px 0px 25px 60px;
 	background:white url(imagenes/torre-cn.png) no-repeat;
 	background-position: 370px 300px;
 	border:solid 1px #AAAAAA;
 	box-shadow: 2px 2px 5px #666;
-	overflow:auto;
+	overflow:hidden;
 	border-radius: 10px;	
 	}
 	
@@ -779,8 +820,10 @@ abbr {
 	background-color: #0040ff;
 	}
 	
-.contenedor h1 {
-	margin-left: 120px;
+.contenedor h2 {
+	width:180px;
+	margin-left:auto;
+	margin-right:auto;	
 	padding-bottom: 20px;
 	}
 	
@@ -794,11 +837,15 @@ abbr {
 	font-size:17px;
 	}
 	
-form span{
+form span, legend{
 	display: block;
 	padding-top:10px;
 	color: blue;
 	font-weight:bold;
+	}
+	
+fieldset {
+	width:340px;
 	}
 	
 form input{
@@ -809,6 +856,8 @@ form input{
 .casilla {
 	width: 40px;
 	}
+	
+
 
 select {
 	margin-top: 7px;
@@ -976,7 +1025,7 @@ select {
 	height:30px;
 	}
 	
- .iconos {
+.iconosDos {
 	width:64px;
 	height:64px;
     float: right;
@@ -1005,22 +1054,228 @@ select {
 	text-align: center;
 	padding-top:50px;
 	}
+
+	
+/* ========================
+	     ALOJAMIENTO
+   ========================	*/
    
+.torontoheader {
+	font-family: "Hamburg Hand";
+	color: red;
+	font-size: 30px;
+	display:inline-block;
+    position: relative;
+	top:4px;
+	}
    
+.contenedorImagen {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+	}
+	
+.imagenHotel {	
+	background-image: url(imagenes/hoteles.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	overflow:hidden;
+	height: 683px;
+	width:auto;
+	position:relative;
+	}	
+	
+.tituloAlojamiento{
+    position: absolute;
+    top: 50px;
+    left: 7%;
+	width:400px;
+	font-family: "Hamburg Hand";
+	font-size: 4.5em;
+	color: white;
+	text-align: left;
+	}   
    
+ #barraGris {
+	height:75px;
+	background-color:#ccc;
+	width:100%;
+	margin-top: 30px;
+	}
+	
+#contenidoBarra {
+	display:block;
+	margin:0px auto;
+	width:800px;
+	}
+	
+.iconografia {
+	width:50px;
+	height:47px;
+	display:inline-block;
+	margin-top:15px;
+	background-repeat:no-repeat;
+	margin-left:50px;
+	}
+	
+.iconografia:first-of-type{
+	margin-left:0px;
+	}
+	
+.textoCorto {
+	vertical-align:top;
+	margin-top:30px;
+	margin-left:5px;
+	display:inline-block;
+	font-size:0.8em;
+	font-weight:bold;
+	width:170px;
+	}
+	
+.textoCorto:last-of-type{
+	margin-top:25px;
+	}
+	
+#billetera{
+	background-image: url(imagenes/wallet.png);
+	}
+
+#manoPlata{
+	background-image: url(imagenes/handmoney.png);
+	}
+
+#interaccionGente{
+	background-image: url(imagenes/personas.png);
+	}
+  
+.subtitulosAlojamiento{
+	margin: 50px auto;
+	display: block;
+	font-size:3em;
+	text-align:center;
+	}
+	
+.seccionReserva {
+	width:70%;
+	margin: 50px auto;
+	display:block;
+	}
+	
+.seccionReserva p{
+	display:inline-block;
+	width:50%;
+	font-size:1.1em;
+	vertical-align:top;
+	margin-bottom:30px;
+	}
+ 
+.seccionReserva img {
+	width:auto;
+	height:auto;
+	vertical-align:top;
+	}
+  
+.tarjetaHoteles{
+	width:70%;
+	margin: 40px auto;
+	height:auto;
+	border: solid 1px;
+	border-radius:5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+	display:flex;
+   }
    
+.tarjetaHoteles img {
+	width:201px;
+	height:201px;
+	margin:20px;
+	display:flex;
+	}
+
+.primeraFila {
+	height:auto;
+	display: block;
+	width:100%;
+	vertical-align:top;
+	margin-right:0px;
+	margin-bottom:5px;
+	}
+	
+.tarjetaHoteles h3 {
+	margin-top: 20px;
+	font-size:1.4em;
+	color: blue;
+	display: inline-block;
+	width:300px;
+	}
+	
+.comentariosClasif {
+	display:inline-block;
+	vertical-align:top;
+	margin-left:25%;
+	}
+	
+.comentarios {
+	font-size:0.7em;
+	margin-left: px;
+	margin-top:30px;
+	display:inline-block;
+	}
+	
+.calificacion{
+	padding: 9px 6px;
+	background-color:blue;
+	color:white;
+	margin-left:20px;
+	border-radius:5px;
+	font-weight:bold;
+	}
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+.ubicacion{
+	width:100%;
+	display: block;
+	margin-bottom:10px;
+	margin-top:10px;
+	font-size:1.1em;
+	color:blue;
+	}
+	
+.distancia{
+	width:100%;
+	display: block;
+	margin-bottom:10px;
+	font-size:0.8em;
+	}
+	
+.resena {
+	width:60%;
+	display: inline-block;
+	margin-bottom:10px;
+	font-size:0.8em;
+	margin-top:50px;
+	}
+	
+.botonHoteles {
+	box-shadow: inset 0 1px 0 0 #4d73bf;
+	background: blue;
+	border: solid 1px #4627b2;
+	color: white;
+	text-shadow: 0 1px 0 #3359a5;
+	font-size:16px;
+	font-weight:bold;
+	padding: 9px 7px;
+	border-radius:5px;
+	margin-left:13%;
+	margin-bottom:5%;
+	margin-right:5%;
+	}
+	
+.botonHoteles:hover {
+	background: #2b54a7;
+	}
+	
+.botonHoteles:active {
+	background: #1d4698;
+	border-color: #1d4698;
+	}

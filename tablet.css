@@ -1,0 +1,1093 @@
+/* INDEX INDEX INDEX INDEX*/
+
+ 
+#cuerpo{
+	width: 100%;
+	background:#FFFFFF;
+	overflow:hidden;
+	font-size: 130%;
+	}
+	
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* ===============
+	   HEADER
+   =============== */
+	
+
+
+#toronto{
+	font-family: "Hamburg Hand";
+	color: red;
+	font-size: 2.5em;
+	display:block;
+	position:relative;
+	top:-32px;
+	width:200px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+/*Este video me ayudó a armar el icono con movimiento del menu hamburguesa:    https://www.youtube.com/watch?v=dIyVTjJAkLw
+Luego reutilizé algunas partes del codigo javascript y diseñé por mi cuenta la función que despliega el menú.*/
+	
+.botonMenu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  top:20px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  }
+  
+.menuHamburguesa{
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+
+.botonMenu.open .menuHamburguesa {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.botonMenu.open .menuHamburguesa::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.botonMenu.open .menuHamburguesa::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+	
+.menuHamburguesa::before,
+.menuHamburguesa::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menuHamburguesa::before {
+  transform: translateY(-10px);
+}
+.menuHamburguesa::after {
+  transform: translateY(10px);
+  }
+  
+nav{
+	padding-left:20px;
+	}
+	
+.menuPrincipal {
+	display: none;
+	}
+	
+.menuPrincipal.open{
+	display: block;
+    animation-name: slidein;
+    animation-duration: 0.5s;
+	}
+	
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+	
+nav li{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 0px 20px;
+  display:block;
+  width:200px;
+}
+
+
+
+nav li a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+} 
+
+nav li a:hover {
+  color: #444444;
+}
+
+nav li a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444444;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav li a:hover::before {
+  width: 100%;
+}
+
+
+.imagenciudad {	
+	background-image: url(imagenes/skyline2tablet.jpg);
+	height: 495px;
+	width:100%;
+	}
+	
+.textoImagen{
+	font-size: 6em;
+	}
+		
+	
+#presentacion{
+	font-size: 1.6em;
+	margin-top: 70px;
+	margin-bottom: 70px;	
+	}
+	
+.grupoRecuadros {
+	width:90%;
+	margin-right:auto;
+	margin-left: auto;
+	margin-bottom: 0px;
+	text-align: center;
+	padding-left: 0px;
+	}
+	
+.grupoRecuadros li{
+	display:inline-block;
+	width:140px;
+	height:190px;
+	margin-bottom:20px;
+	margin-right: 8px;
+	margin-left: 8px;
+	background-color: #b7b6fd;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+	border-radius: 4px;
+	text-align: center;
+	}
+
+.grupoRecuadros li:active {
+	background-color: #7766fd;
+	}
+	
+.grupoRecuadros li:last-child{
+		margin-right: 8px;
+		}
+	
+.textoBajo {
+	padding-top: 160px;
+	width:220px;
+	display: block;
+	font-size:16px;
+	position:relative;
+	left:-42px;
+	}
+ 
+#tituloInfo{
+	text-align:center;
+	font-size: 2em;
+	margin-top:20px;
+	margin-bottom: 30px;
+	}
+
+#informacion {
+	background:  none;
+	height:auto;
+	background-color:rgba(247,247,247,0.7);
+	width:100%;
+	}
+#recuadroTexto {
+	width:100%;
+	margin: 0 auto;
+	background-color:rgba(247,247,247,0.7);
+	padding-bottom: 20px;
+	height:auto;
+	}
+	
+.textoInfo:last-child {
+	display:none;
+	}
+	
+.textoInfo{
+	width:80%;
+	font-weight: regular;
+	font-size: 1.2em;
+	line-height : 1.3em;
+	margin: 0 auto;
+	padding-top: 8px;
+	}
+	
+#infosCortas {
+	background-color: #edeffc;
+	padding-bottom: 50px;
+	}
+	
+#tituloVisitas {
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	width:90%;
+	margin: 0 auto;
+	}
+
+#tarjetasInfo {
+	margin-left:auto;	
+	margin-right:auto;
+	width: 555px;
+	padding: 0;
+	}
+	
+#tarjetasInfo li {
+	margin-bottom: 20px;
+	margin-right: 10px;
+	margin-left:10px;
+	height:370px;
+	padding-bottom:10px;
+	}
+
+#tarjetasInfo li p {
+	margin: 5px 5px 5px 7px;
+	font-size: 0.9em;
+	}
+	
+#imagenesDescriptivas {
+	height:0px;
+	}
+	
+#audiovisual {
+	background-color: white;
+	padding-bottom: 50px;
+	}
+	
+#videoToronto {
+	text-align: center;
+	}
+
+#audiovisual h2 {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	font-size: 30px
+	}
+
+#audiovisual p {
+	padding-bottom: 30px;
+	width:80%;
+	margin: 0 auto;
+	}
+
+iframe {
+	width:95%;
+	}
+
+/*Boton aprendido con tutorial de Freecodecamp
+Link: https://www.youtube.com/watch?v=pmKyG3NBY_k&list=PLWKjhJtqVAbl1AfjiGyYxwpdAPi5v-1OU&index=2&t=0s */	
+.botonAnimado {
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+	width:160px;
+	display: block;
+	}	
+
+/*FOOTER FOOTER FOOTER FOOTER FOOTER*/
+	
+footer {
+	width:100%;
+	height:auto;
+	}
+
+.margenFooter {
+	margin-left: 0px;
+	margin-right:0px;
+	width:100%;
+	overflow:hidden;
+	}
+
+.columnasFooter {
+	width: 100%;
+	display: inline-block;
+	vertical-align:top;
+	padding: 5% 15%;
+	margin-left:auto;
+	margin-right:auto;
+	display:flex;
+	}
+
+.columnasFooterAncha {
+	width: 100%;
+	display: inline-block;
+	vertical-align:top;
+	padding: 5% 15%;
+	margin-left:auto;
+	margin-right:auto;
+	display:flex;
+	}
+	
+.titulosFooter {
+	font-size: 1.6em;
+	margin-left: 0px;
+	font-weight: bold;
+	width:20%;
+	padding-left:10%;
+	display: flex;
+	justify-content: center;
+	margin: auto 0;
+	padding-top:0px;
+	}
+	
+.columnasFooter li ,.columnasFooterAncha li{
+	display: block;
+	font-size: 1.1em;
+	padding-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left:0px;
+	}
+
+.segundaFila {	
+	display: block;
+	width:90%;
+	height:auto;
+	padding-left:15%;
+	}
+	
+.descarga {
+	font-size: 1.5em;
+	padding-top: 0px;
+	margin-top:40px;
+	padding-right:0px;
+	margin-left:10%;
+	margin-right:auto;
+	width:400px;
+	font-weight: bold;
+	display:block;
+	}
+
+.ofertas {
+	display: none;
+	}
+	
+
+
+#apple, #android {
+	margin: 15px 20%;
+	padding: 0;
+	width:204px;
+	height:56px;	
+	display: block;
+	font-size: 0px;
+	}
+	
+#apple {
+	background: url(imagenes/sprites.png) -192px -66px;
+	}
+
+#android{
+	background: url(imagenes/sprites.png) -192px 0px;
+	}
+	
+#fb {
+	width:64px;
+	height:64px;
+	display:inline-block;
+	margin-left:20%;
+	margin-right:auto;	
+	margin-bottom:8px;
+	margin-top:40px;
+	position: relative;
+	}
+	
+#fblink {
+	width:64px;
+	height:64px;
+	background: url(imagenes/sprites.png) 0 -66px;
+	display:inline-block;
+	font-size: 0;
+	}
+	
+#fblink:active {
+	background: url(imagenes/sprites.png) 0 0;
+	}
+
+.igtw {
+	width:64px;
+	height:64px;
+	display:inline-block;
+	}
+	
+#iglink {
+	width:64px;
+	height:64px;
+	background: url(imagenes/sprites.png) -64px -66px;
+	display:inline-block;
+	font-size: 0;
+	position: relative;
+	}
+	
+#iglink:hover {
+	background: url(imagenes/sprites.png) -64px 0px;
+	}
+
+#twlink {
+	width:64px;
+	height:64px;
+	background: url(imagenes/sprites.png) -128px -66px;
+	display:inline-block;
+	font-size: 0;
+	position: relative;
+	}
+	
+#twlink:active {
+	background: url(imagenes/sprites.png) -128px 0px;
+	}
+
+summary {
+	margin-top: 50px;
+	}
+
+.lineaDivisoria {
+	margin: 15px 0px 0px 27%;
+	height: 1 px;
+	width:100px;
+	border: solid 1px;
+	}
+
+/*LUGARES LUGARES LUGARES LUGARES LUGARES*/
+
+.contenedorImagen{
+	width:100%
+	}
+
+.imagengaleria {	
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.5)),
+	  url(imagenes/artgallerytablet.jpg);
+	overflow:hidden;
+	height: 437px;
+	width:auto;
+	}
+
+.contenedorSobreImagen {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 40px;
+	width: 90%;
+	border: solid 1px;
+	margin-top: -100px;
+	z-index: 1;
+    position:relative;
+	background-color: #EEEEEE;
+	box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.2);
+	}
+	
+.contenedorSobreImagen  p {
+	font-size: 1.1em;
+	padding: 12px;
+	}
+	
+.colorRojo {
+	color:red;
+	font-weight:bold;
+	}
+	
+#menuAtracciones {
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:30px;
+	width:400px;
+	height: 80px;
+    list-style: none;
+	position:relative;
+	left:-2%;
+	}
+
+.iconos {
+	width:80px;
+	height:80px;
+	float: left;
+	margin-right: 0px;
+	}
+	
+.iconos a{
+	width:80px;
+	height:80px;
+	display: inline-block;
+	font-size:0px;
+	}
+	
+.barrios{
+	width:100%;
+	}
+	
+.headersBarrios {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 2.2em;
+	width:90%;
+		}
+		
+.contenedorImg {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	}
+	
+.presentacionBarrio {
+	width: 90%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top: 50px;
+	}
+	
+.presentacionBarrio p {
+	padding-bottom: 10px;
+	font-size: 14px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+	
+.barrios h3{
+	text-align: center;
+	font-size: 1.7em;
+	margin: 30px 0px;
+	}
+		
+.columnaInfo{
+	width: 80%;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	vertical-align: top;
+	box-shadow: 2px 2px 5px #666;
+	background-color: rgba(255,255,255,0.7);
+	height:auto;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	margin-bottom: 30px;
+	padding-bottom:20px;
+	}
+
+.columnaInfo h4 {
+	text-align:center;
+	font-size:20px;
+	padding-top:30px;
+	font-family: "Hamburg Hand";
+	text-transform: uppercase;
+	color: hsl(235, 48%, 19%); 
+	}
+
+.columnaInfo p{
+	margin: 10px 20px;
+	font-size: 0.8em;
+	line-height : 16px;
+	}
+	
+.columnaInfo:last-of-type{
+	display:none;
+	}
+	
+.restaurantes {
+	width: 90%;
+	margin-left:auto;
+	margin-right:auto;	
+	font-size: 0.8em;
+	}
+	
+.barriosWhite{
+	background-color:white;
+	padding-bottom:60px;
+	}
+	
+abbr { 
+	text-decoration:none;
+	}
+	
+.galeriaImagenes{
+	display:none;
+	}
+
+/* INFORMACION INFORMACION INFORMACION INFORMACION*/
+
+.secciones {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom:40px;
+	font-size:2.5em;
+	font-family: "Hamburg Hand";
+	}
+	
+.noticiaPrincipal {
+		width: 100%;
+		height: auto;
+		padding-top:30px;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 2px 2px 5px #666;
+		}
+	
+.noticiaPrincipal img {
+	display: block;
+	width: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+		
+
+.noticiaPrincipalTexto {
+	width:100%;
+	height: auto;
+	display: inline-block;
+	vertical-align:top;
+	padding-bottom:30px;
+	}
+
+.noticiaPrincipalTexto h3{
+	display: block;
+	width: 60%;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top:20px;
+	font-size: 1.6em;
+	font-family: "Hamburg Hand";
+	}
+
+.noticiaPrincipalTexto p {
+	display: block;
+	width: 80%;
+	vertical-align:top;
+	font-size: 1em;
+	font-weight:500;
+	margin-left: auto;
+	margin-right:auto;	
+	margin-top: 20px;
+	}
+
+.grupoRecuadrosDos {
+	margin: 0 auto;
+	width:302px;
+	}
+	
+.grupoRecuadrosDos .tarjetasNoticias{
+	display:inline-block;
+	width:300px;
+	height:300px;
+	margin-right: 0px;
+	margin-bottom:20px;
+	}
+
+.imagenNoticia {
+  display: block;
+}
+
+.tarjetaDesli {
+  position: absolute;
+  bottom: 100%;
+  background-color: hsla(224, 100%, 50%, 0.8);
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.tarjetasNoticias:active .tarjetaDesli{
+  bottom: 0;
+  height: 100%;
+}
+
+.tarjetaDesli h3{
+  color: white;
+  font-size: 1.3em;
+  text-align: center;
+  margin: 20px;
+}
+
+.tarjetaDesli p {
+  color: white;
+  font-size: 0.7em;
+  text-align: center;
+  margin: 0px 20px;
+	}
+	
+.cajaLinea {
+	border: solid 1px;
+	}
+
+.lineaColorGradiente {
+	height: 1px;
+	padding: 2px;
+	background-color: #7CB9E8;
+	width: 90%;
+	margin: 70px auto;
+	display: block;
+	transform: skewx(30deg);
+	transform-origin: bottom left;
+	}
+	
+.videoPadding {
+	margin: 50px auto;
+	width: 480px;
+	display: block;
+	}
+	
+/* CONTACTO CONTACTO CONTACTO CONTACTO*/
+
+#fondoFormulario{
+	background-color: hsl(0, 0%, 98%);
+	padding-top: 30px;
+	padding-bottom: 30px;
+	}
+	
+.contenedor{
+	margin:50px auto;
+	padding:0px 0px 25px 0px;
+	background:white url(imagenes/torre-cn.png) no-repeat;
+	background-position:500px 400px;
+	border: none;
+	overflow:hidden;
+	width:95%
+	}
+	
+.lineaColor {
+	width: 100%;
+	margin-left:0px;
+	margin-bottom: 30px;
+	height: 4px;
+	background-color: #0040ff;
+	}
+	
+.contenedor h1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 220px;
+	display: block;
+	padding-bottom: 20px;
+	}
+	
+.contenedor p {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	font-size: 1em;
+	width: 90%;
+	margin: 0 auto;
+	}
+	
+.contenedor p .letraBold {
+	font-size:1.1em;
+	}
+	
+form{
+	width:100%;	
+	}
+	
+.form span{
+	display: block;
+	padding-top:10px;
+	margin-bottom:10px;
+	color: blue;
+	font-weight:bold;
+	margin-left: auto;
+	margin-right: auto;
+	font-size:1em;
+	width:90%;
+	}
+	
+form input{
+	width:90%;
+	padding:5px 0;
+	margin-bottom: 15px;
+	margin-top:5px;
+	margin-left: auto;
+	margin-right: auto;	
+	display:block;
+	}
+	
+#country {
+	padding:5px 0;
+	margin-bottom: 10px;
+	margin-top:5px;
+	margin-left: 5%;
+	margin-right: auto;	
+	display:block;
+	}
+	
+fieldset {
+	margin-left: 5%;
+	width: 50%
+	}
+	
+.extraMargin {
+	margin-top:10px;
+	}
+	
+.casilla {
+	width: 40px;
+	padding:5px 0;
+	margin-bottom: 10px;
+	margin-top:5px;
+	margin-left: auto;
+	margin-right: auto;	
+	display:inline;
+	}
+
+
+select {
+	margin-top: 7px;
+	margin-bottom: 7px;
+	}	
+	
+.inputEstilo{
+	padding:5px 0;
+	margin-bottom: 10px;
+	margin-top:5px;
+	margin-left: 5%;
+	margin-right: auto;	
+	display:block;
+	}
+	
+#envio {
+	box-shadow: inset 0 1px 0 0 #4d73bf;
+	background: #4627b2;
+	border: solid 1px #4627b2;
+	color: white;
+	text-shadow: 0 1px 0 #3359a5;
+	width: 100px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border-radius: 10px
+	}
+	
+#envio:hover {
+	background: #2b54a7;
+	}
+	
+#envio:active {
+	background: #1d4698;
+	border-color: #1d4698;
+	}
+	
+	
+/* ========================
+	GRACIAS GRACIAS GRACIAS
+   ========================	*/
+   
+.primertitulo {
+	text-align: center;
+	width: 90%;
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	color: hsl(234, 12%, 34%);
+	}
+
+.primertitulo h1 {
+	font-weight:100;
+	font-size: 2.1em;
+	}
+	
+.subtitulo {
+	font-weight: 600;
+	font-size: 2.3em;
+	margin-top: 20px;
+	}
+
+.informacion {
+	color: hsl(229, 6%, 66%);
+	font-size:1.2em;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	}
+	
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+  grid-auto-rows: 100px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  color: hsl(234, 12%, 34%);
+  }
+  
+  .uno {
+  grid-column: 1;
+  grid-row: 1 / 3;
+
+}
+.dos { 
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+.tres {
+  grid-column: 2;
+  grid-row: 3 / 5;
+}
+.cuatro {
+  grid-column: 1;
+  grid-row: 3 / 5;
+  }
+  
+.tarjetas .uno, .tarjetas .dos, .tarjetas .tres, .tarjetas .cuatro{ 
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  }
+  
+ .lineafina {
+	box-shadow: none;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom:4px;
+	border: none;
+    border-radius: 10px 10px 0px 0px;
+	}
+	
+  
+.tarjetas h2 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 18px;
+	padding: 20px 25px 10px 30px;
+	}
+
+.tarjetas p {
+	padding: 0px 25px 24px 30px;
+	margin-right: 20px;
+	color: hsl(229, 6%, 66%);
+	font-size:12px;
+	}	
+  
+.botonInfo {
+	margin-left:30px;
+	margin-top:16px;
+	}
+	
+#botonCuatroLineas{
+	margin-top:6px;
+	}
+	
+.iconosDos {
+	width:64px;
+	height:64px;
+    float: right;
+	margin-right:30px;
+	box-shadow: none;
+	position:relative;
+	top:-10px;
+	}
+	
+
+.attribution {
+	text-align: center;
+	padding-top:50px;
+	}
+	
+/* ========================
+	     ALOJAMIENTO
+   ========================	*/
+   
+.torontoheader{
+	font-family: "Hamburg Hand";
+	color: red;
+	font-size: 2.5em;
+	display:block;
+	position:relative;
+	top:-32px;
+	width:200px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+   
+.imagenHotel {	
+	background-image: url(imagenes/tablet-hoteles.jpg);
+	height:400px;
+	}
+	
+.tituloAlojamiento{
+	font-size:3em;
+	}
+	
+#barraGris {
+	display:none;
+	}
+	
+.seccionReserva {
+	width:70%
+	}
+	
+.seccionReserva p{
+	display:inline-block;
+	width:100%;
+	font-size:0.9em
+	}
+	
+.seccionReserva img{
+	display:block;
+	width:387px;
+	margin: 30px auto;
+	}
+	
+.tarjetaHoteles h3 {
+	width: 90%;
+	font-size:1.5em;
+	}
+	
+.tarjetaHoteles img {
+	display:block;
+	margin-left:15px;
+	margin-right:15px;
+	}
+	
+.ubicacion{
+	width:80%;
+	}
+	
+.comentariosClasif {
+	margin-left: 0%;
+	margin-bottom:10px;
+	width: 100%;
+	}
+	
+.comentarios {
+	margin-bottom:20px;
+	}
+
+.botonHoteles {
+	margin-left:0%;
+	margin-top:20px;
+	margin-bottom:20px;
+	}  
+   
